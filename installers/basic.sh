@@ -11,7 +11,7 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BF
 
 for app in $APPS
 do
-    echo "installing $1"
+    echo "installing $app"
 
     sleep 3
 
