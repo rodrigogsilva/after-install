@@ -5,7 +5,7 @@ if [ $(whoami) != 'root' ]; then
     exit 1;
 fi
 
-chomod +x -R installers
+chmod +x -R installers
 
 install() {
     echo "INSTALLING $1"
