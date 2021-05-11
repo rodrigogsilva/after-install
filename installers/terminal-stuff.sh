@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+MY_HOME=/home/rodrigogsilva
+
 chsh -s $(which zsh)
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -24,9 +26,9 @@ curl -L -O https://github.com/tonsky/FiraCode/releases/download/5.2/Fira_Code_v5
 
 unzip Fira_Code_v5.2.zip
 
-mkdir -p ~/.local/share/fonts
+mkdir -p $MY_HOME/.local/share/fonts
 
-mv ttf/* ~/.local/share/fonts/
+mv ttf/* $MY_HOME/.local/share/fonts/
 
 rm Fira_Code_v5.2.zip specimen.html README.txt fira_code.css
 
@@ -34,4 +36,4 @@ rm -rf ttf woff woff2 variable_ttf
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-$MY_HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
