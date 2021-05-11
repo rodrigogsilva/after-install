@@ -8,10 +8,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/rodrigogsilva/after-install">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">My ubuntu system after install</h3>
 
   <p align="center">
@@ -51,7 +47,7 @@ Feel free to change and use it as you like!
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/rodrigogsilva/after-install/blob/master/images/logo.png)
+[![Product Name Screen Shot][product-screenshot]]()
 
 <!-- GETTING STARTED -->
 
@@ -127,3 +123,4 @@ Project Link: [https://github.com/rodrigogsilva/after-install](https://github.co
 [license-url]: https://github.com/rodrigogsilva/after-install/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/rodrigogsilva
+[product-screenshot]: images/screenshot.png
