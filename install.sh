@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-MY_HOME=/home/rodrigogsilva
-
-if [ $(whoami) != 'root' ]; then
-    echo "This script uses alot of root comands, so please, run this with 'sudo'"
+if [ $(whoami) == 'root' ]; then
+    echo "This script uses sudo but it's better to type your password when needed instead of run the script as sudo"
     exit 1;
 fi
 
@@ -35,9 +33,9 @@ git config --global user.email "rodrigogoncalveess@gmail.com"
 
 echo "Copying dotfiles"
 
-cp -iv dotfiles/.alias $MY_HOME/.alias
-cp -iv dotfiles/.zshrc $MY_HOME/.zshrc
-cp -iv dotfiles/.exports $MY_HOME/.exports
+cp -iv dotfiles/.alias ~/.alias
+cp -iv dotfiles/.zshrc ~/.zshrc
+cp -iv dotfiles/.exports ~/.exports
 
 echo "
 Gnome extensions : 
