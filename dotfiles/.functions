@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+vidlen() {
+  exiftool -n -q -p '${Duration;our $sum;$_=ConvertDuration($sum+=$_)
+                    }' ./*.$1| tail -n1
+}
+
+md5check() {
+  echo "$1 $2" | md5sum --check
+}
+
+sha256check() {
+  echo "$1 $2" | sha256sum --check
+}
+
+sha1check() {
+  echo "$1 $2" | sha1sum --check
+}
+
+update() {
+  if command -v apt &> /dev/null
+  then
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt dist-upgrade -y
+    sudo apt clean -y
+    sudo apt autoremove -y
+    sudo apt autoclean -y
+    sudo apt clean
+  else
+    sudo pacman -Syy
+    sudo pacman -Su
+  fi;
+}
